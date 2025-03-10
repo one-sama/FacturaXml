@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="modeloFactura.xsl"?>
+
+<fe:Facturae xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:fe="http://www.facturae.es/Facturae/2009/v3.2/Facturae">
+   <FileHeader>
+        <SchemaVersion>3.2</SchemaVersion>
+        <Modality>I</Modality>
+        <InvoiceIssuerType>EM</InvoiceIssuerType>
+        <Batch>
+            <BatchIdentifier>1234567890TEL</BatchIdentifier>
+            <InvoicesCount>1</InvoicesCount>
+            <TotalInvoicesAmount>
+                <TotalAmount>85.50</TotalAmount>
+            </TotalInvoicesAmount>
+            <TotalOutstandingAmount>
+                <TotalAmount>85.50</TotalAmount>
+            </TotalOutstandingAmount>
+            <TotalExecutableAmount>
+                <TotalAmount>85.50</TotalAmount>
+            </TotalExecutableAmount>
+            <InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
+        </Batch>
+    </FileHeader>
+    <Parties>
+        <SellerParty>
+            <TaxIdentification>
+                <PersonTypeCode>J</PersonTypeCode>
+                <ResidenceTypeCode>R</ResidenceTypeCode>
+                <TaxIdentificationNumber>A12345678</TaxIdentificationNumber>
+            </TaxIdentification>
+            <LegalEntity>
+                <CorporateName>Telecom Plus S.A.</CorporateName>
+                <TradeName>Telecom+</TradeName>
+                <AddressInSpain>
+                    <Address>Avenida de las Comunicaciones 45</Address>
+                    <PostCode>28023</PostCode>
+                    <Town>Madrid</Town>
+                    <Province>Madrid</Province>
+                    <CountryCode>ESP</CountryCode>
+                </AddressInSpain>
+                <ContactDetails>
+                    <Telephone>900123123</Telephone>
+                    <WebAddress>www.telecomplus.com</WebAddress>
+                    <ElectronicMail>atencion@telecomplus.com</ElectronicMail>
+                </ContactDetails>
+            </LegalEntity>
+        </SellerParty>
+        <BuyerParty>
+            <TaxIdentification>
+                <PersonTypeCode>F</PersonTypeCode>
+                <ResidenceTypeCode>E</ResidenceTypeCode>
+                <TaxIdentificationNumber>12345678Z</TaxIdentificationNumber>
+            </TaxIdentification>
+            <Individual>
+                <Name>Juan</Name>
+                <FirstSurname>Pérez</FirstSurname>
+                <OverseasAddress>
+                    <Address>Calle Falsa 123</Address>
+                    <PostCodeAndTown>28080 Madrid</PostCodeAndTown>
+                    <CountryCode>ESP</CountryCode>
+                </OverseasAddress>
+                <ContactDetails>
+                    <Telephone>911234567</Telephone>
+                    <Mobile>600123456</Mobile>
+                </ContactDetails>
+            </Individual>
+        </BuyerParty>
+    </Parties>
+    <Invoices>
+        <Invoice>
+            <InvoiceHeader>
+                <InvoiceNumber>2025001</InvoiceNumber>
+                <InvoiceSeriesCode>TP</InvoiceSeriesCode>
+                <InvoiceDocumentType>FC</InvoiceDocumentType>
+                <InvoiceClass>OO</InvoiceClass>
+            </InvoiceHeader>
+            <InvoiceIssueData>
+                <IssueDate>2025-03-09</IssueDate>
+                <InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
+                <TaxCurrencyCode>EUR</TaxCurrencyCode>
+                <LanguageName>es</LanguageName>
+            </InvoiceIssueData>
+            <InvoiceTotals>
+                <TotalGrossAmount>70.66</TotalGrossAmount>
+                <TotalTaxOutputs>14.84</TotalTaxOutputs>
+                <InvoiceTotal>85.50</InvoiceTotal>
+            </InvoiceTotals>
+            <Items>
+                <InvoiceLine>
+                    <ItemDescription>Servicio de Telefonía</ItemDescription>
+                    <Quantity>1</Quantity>
+                    <UnitPriceWithoutTax>30.00</UnitPriceWithoutTax>
+                    <GrossAmount>30.00</GrossAmount>
+                </InvoiceLine>
+                <InvoiceLine>
+                    <ItemDescription>Servicio de Internet</ItemDescription>
+                    <Quantity>1</Quantity>
+                    <UnitPriceWithoutTax>25.00</UnitPriceWithoutTax>
+                    <GrossAmount>25.00</GrossAmount>
+                </InvoiceLine>
+                <InvoiceLine>
+                    <ItemDescription>Servicio de Televisión</ItemDescription>
+                    <Quantity>1</Quantity>
+                    <UnitPriceWithoutTax>15.66</UnitPriceWithoutTax>
+                    <GrossAmount>15.66</GrossAmount>
+                </InvoiceLine>
+            </Items>
+        </Invoice>
+    </Invoices>
+</fe:Facturae>
